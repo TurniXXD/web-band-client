@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "steepens-web"
+  },
+  "targets": {
+    "steepens-web": {
+      "hosting": {
+        "live-dev": [
+          "steepens-web"
+        ]
+      }
+    }
+  }
+}

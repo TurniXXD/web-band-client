@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "target": "live-dev",
+    "public": "out",
+    "rewrites": [{
+      "source": "**/**",
+      "function": "next"
+    }],
+    "functions": {
+      "source": "dist/functions",
+      "runtime": "nodejs12"
+    },
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

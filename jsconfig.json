@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": ".",
+  },
+  "exclude": ["node_modules", "dist"]
+}
