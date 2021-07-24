@@ -11,10 +11,11 @@ module.exports = {
       },
     ];
   },
-/*   env: {
+  env: {
     API_URL: process.env.API_URL,
-    IMAGES_DOMAIN: process.env.IMAGES_DOMAIN
-  },
+    IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
+    IMAGES_LOADER: process.env.IMAGES_LOADER
+  }, /*
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN
@@ -25,7 +26,7 @@ module.exports = {
 /*     loader: 'cloudinary',
     path: `https://${process.env.IMAGES_DOMAIN}/${process.env.IMAGES_DOMAIN_USERNAME}/`, */
     //loader: 'cloudinary',
-    domains: [process.env.IMAGES_DOMAIN],
+    domains: [ 'localhost', process.env.IMAGES_DOMAIN],
   },
   webpack: config => {
     config.resolve.alias['components'] = path.join(__dirname, 'components')
