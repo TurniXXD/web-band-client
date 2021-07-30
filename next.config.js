@@ -25,7 +25,7 @@ module.exports = {
     imageSizes: [16, 32, 48, 64, 96], */
 /*     loader: 'cloudinary',
     path: `https://${process.env.IMAGES_DOMAIN}/${process.env.IMAGES_DOMAIN_USERNAME}/`, */
-    //loader: 'cloudinary',
+    loader: 'cloudinary',
     domains: [ 'localhost', process.env.IMAGES_DOMAIN],
   },
   webpack: config => {

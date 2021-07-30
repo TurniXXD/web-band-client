@@ -1,6 +1,7 @@
 import React from "react";
-import styles from '../styles/Home.module.css'
+import styles from 'styles/Home.module.css'
 import Navigation from 'components/Navigation'
+import ScrollUpBtn from "components/ScrollUpBtn";
 import Hero from 'components/Hero'
 import Music from 'components/Music'
 import People from 'components/People'
@@ -9,17 +10,23 @@ import News from 'components/News'
 import Contact from 'components/Contact'
 import { fetchAPI } from 'lib/api'
 
+import PropTypes from 'prop-types';
+
 export default function Home({ posts, songs, photos }) {
-  console.log(posts)
   return (
-    <div className="content" >
-      <Navigation></Navigation>
-      <Hero></Hero>
-      <Music songs={songs}></Music>
-      <People></People>
-      <Gallery photos={photos}></Gallery>
-      <News posts={posts}></News>
-      <Contact></Contact>
+    <div className="content row" >
+      <ScrollUpBtn></ScrollUpBtn>
+      <div className="col-2">
+        <Navigation></Navigation>
+      </div>
+      <div className="col-10">
+        <Hero></Hero>
+        <Music songs={songs}></Music>
+        <People></People>
+        <Gallery photos={photos}></Gallery>
+        <News posts={posts}></News>
+        <Contact></Contact>
+      </div>
     </div>
   )
 }

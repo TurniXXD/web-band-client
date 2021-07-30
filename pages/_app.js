@@ -14,8 +14,6 @@ import { fetchAPI } from "lib/api";
 
 import PropTypes from 'prop-types';
 
-//import { getStrapiMedia } from "lib/media"
-
 export const GlobalContext = createContext({})
 
 const API_URL = process.env.API_URL
