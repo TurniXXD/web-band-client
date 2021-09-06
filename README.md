@@ -2,6 +2,13 @@
 
 https://www.youtube.com/watch?v=WrmndNpWSJw
 
+# TODO
+- [x] create working singlepage mechanism and navigation
+- [ ] add people type to strapi
+- [ ] add gallery plugin
+- [ ] music player functionality
+- [ ] mail server
+
 ## Next.js
 - Serverside rendering (faster load and fetch)
 - SEO optimalization

@@ -70,7 +70,7 @@ export default function Contact() {
 						</form>
           </div>
         </div>
-        <div className="row flex-center">&copy 2021 | Steepens</div>
+        <div className="row flex-center">&copy; {new Date().getFullYear()} | Steepens</div>
       </div>
     </div>
   )

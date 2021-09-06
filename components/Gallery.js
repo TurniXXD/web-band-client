@@ -12,7 +12,7 @@ export default function Gallery({ photos }) {
           {photos && photos.map((photo) => {
             return (
               <div key={photo.id} className="row">
-                <Image src={photo.image[0].formats.medium.url} width={250} height={140.63} alt={photo.image[0].formats.medium.name}/>
+                <Image src={photo?.image[0].formats?.medium.url} width={250} height={140.63} alt={photo?.Simage[0].formats?.medium.name}/>
               </div>
             )
           })}

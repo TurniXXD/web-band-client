@@ -1,7 +1,7 @@
 import React from "react";
-import styles from 'styles/Home.module.css'
-import Navigation from 'components/Navigation'
+import HeadWrapper from 'components/HeadWrapper'
 import ScrollUpBtn from "components/ScrollUpBtn";
+import Navigation from 'components/Navigation'
 import Hero from 'components/Hero'
 import Music from 'components/Music'
 import People from 'components/People'
@@ -10,43 +10,51 @@ import News from 'components/News'
 import Contact from 'components/Contact'
 import { fetchAPI } from 'lib/api'
 
-import PropTypes from 'prop-types';
+import styles from 'styles/Home.module.css'
 
-export default function Home({ posts, songs, photos }) {
+export default function Home({ global, songs, people, photos, posts }) {
   return (
-    <div className="content row" >
-      <ScrollUpBtn></ScrollUpBtn>
-      <div className="col-2">
-        <Navigation></Navigation>
+    <>
+      {global && <HeadWrapper global={global}/>}
+      <div className="content row" >
+        <ScrollUpBtn/>
+        <div className="col-2">
+          <Navigation/>
+        </div>
+        <div className="col-10">
+          <Hero/>
+          {songs && <Music songs={songs}/>}
+          {people && <People people={people}/>}
+          {photos && <Gallery photos={photos}/>}
+          {posts && <News posts={posts}/>}
+          <Contact/>
+        </div>
       </div>
-      <div className="col-10">
-        <Hero></Hero>
-        <Music songs={songs}></Music>
-        <People></People>
-        <Gallery photos={photos}></Gallery>
-        <News posts={posts}></News>
-        <Contact></Contact>
-      </div>
-    </div>
+    </>
+
   )
 }
 
 export async function getStaticProps() {
   try {
-    const [posts, songs, photos] = await Promise.all([
-      fetchAPI('posts'),
+    const [global, songs, people, photos, posts] = await Promise.all([
+      fetchAPI('global'),
       fetchAPI('songs'),
-      fetchAPI('photos')
+      fetchAPI('people'),
+      fetchAPI('photos'),
+      fetchAPI('posts')
     ])
 
-    console.log(`${posts}\n${songs}\n${photos}`)
+    console.log(`${global}\n${songs}\n${people}\n${photos}\n${posts}`)
 
     return {
-      props: { posts, songs, photos },
+      props: { global, songs, people, photos, posts },
       // ability to add dynamic pieces by revalidating the code and not having to rebuild each time
-      //revalidate: 1,
+      revalidate: 1,
     };
   } catch (error) {
+    console.log(error)
+
     return {
       props: null
     }
