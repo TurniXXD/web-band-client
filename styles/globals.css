@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--red: #B70101;
+	--red-glow: #e71111af;
+	--red-corner-glow-1: #5a0000;
+	--white: #ffffff;
+	--black: #000000;
+	--black-light: #111111;
+	--grey: rgb(5, 4, 4);
+	--grey-dark: rgb(43, 37, 37);
+}
+
 * {
   box-sizing: border-box;
   color: #fff;
@@ -13,14 +24,16 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: linear-gradient(112deg, #520b0b, #690c0c, #7b0e0e, #b42121, #7b0e0e, #690c0c, #520b0b);
-	background-size: 1800% 1800%;
-	overflow-x: hidden;
+}
 
-	-webkit-animation: gradientBg1 19s ease infinite;
-	-moz-animation: gradientBg1 19s ease infinite;
-	-o-animation: gradientBg1 19s ease infinite;
-	animation: gradientBg1 19s ease infinite;
+body {
+	overflow-x: hidden;
+	background: var(--black);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 [class*='flex-'] {
@@ -40,40 +53,59 @@ body {
   justify-content: center;
 }
 
-:root {
-	--red: #ff0000;
-	--red-transparent: RGBA(255,0,0,0.5);
-	--white: #fff;
-	--grey: rgb(80, 72, 72);
-	--grey-dark: rgb(43, 37, 37);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .rounded-img {
   border-radius: 50%;
 }
 
-@-webkit-keyframes gradientBg1 {
-	0%{background-position:0% 25%}
-	50%{background-position:100% 76%}
-	100%{background-position:0% 25%}
+.hide-banner {
+  background: var(--black);
+  width: 100%;
+  height: 50px;
+  margin-top: -50px;
+  z-index: 2;
 }
-@-moz-keyframes gradientBg1 {
-	0%{background-position:0% 25%}
-	50%{background-position:100% 76%}
-	100%{background-position:0% 25%}
+
+.card-wrapper>div {
+	background: var(--black) !important;
+	padding: 0 !important;
+	width: unset !important;
 }
-@-o-keyframes gradientBg1 {
-	0%{background-position:0% 25%}
-	50%{background-position:100% 76%}
-	100%{background-position:0% 25%}
+
+.card {
+	position:relative;
+	border: 2px solid var(--red);
+	transition: all .3s ease;
+	background: var(--black-light);
+	padding: 2rem;
+	box-shadow: 0 0 35px var(--red-glow);
 }
-@keyframes gradientBg1 {
-	0%{background-position:0% 25%}
-	50%{background-position:100% 76%}
-	100%{background-position:0% 25%}
+
+.card-corner-tl:after {
+  content: "";
+  position:absolute;
+	top: 0;
+	left: 0;
+  margin:-20px;
+  width:40px;
+  height:40px;
+  transform:rotate(45deg);
+	background: linear-gradient(90deg, var(--black) 20%, var(--red-corner-glow-1));
+	border-right: 2px solid var(--red);
+}
+
+.card-corner-br:after {
+  content: "";
+  position:absolute;
+	bottom: 0;
+	right: 0;
+  margin:-20px;
+  width:40px;
+  height:40px;
+  transform:rotate(45deg);
+	background: linear-gradient(-90deg, var(--black) 20%, var(--red-corner-glow-1));
+	border-left: 2px solid var(--red);
+}
+
+.person:first-child {
+	margin-left: 0 !important;
 }

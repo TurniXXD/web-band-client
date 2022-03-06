@@ -14,7 +14,7 @@ export default function News({ posts }) {
 					posts.map((post) => {
 						return (
 							<div key={post?.id} className="flex-row">
-								<div className="col">
+								<div className="flex-col">
 									<div className="flex-row" style={{ width: 300 + 'px' }}>
 										<Image
 											src={post?.image[0].formats?.medium.url || placeholder}
@@ -24,7 +24,7 @@ export default function News({ posts }) {
 										/>
 									</div>
 								</div>
-								<div className="col">
+								<div className="flex-col">
 									<span>{post?.createdAt}</span>
 									<h2>{post?.title}</h2> <br />
 									<p>{post?.description}</p> <br />

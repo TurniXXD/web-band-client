@@ -148,17 +148,17 @@ export default function Music({ songs }) {
 						<div id="music-progress-bar"></div>
 					</div>
 					<div className="music-progress-time row">
-						<div id="start-time" className="col">
+						<div id="start-time" className="flex-col">
 							00:00
 						</div>
-						<div id="end-time" className="col">
+						<div id="end-time" className="flex-col">
 							03:24
 						</div>
 					</div>
 				</div>
 			</div>
 			<div id="song-list-wrapper" className="flex-row">
-				<div className="col">
+				<div className="flex-col">
 					{songs &&
 						songs.map((song) => {
 							return (

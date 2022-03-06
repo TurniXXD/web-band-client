@@ -100,30 +100,34 @@ export default function Contact() {
 		<div id="kontakt" className="content container">
 			<h1>kontakt</h1>
 			<div className="flex-row">
-				<div id="socials-wrapper" className="col">
+				<div id="socials-wrapper" className="flex-col">
 					<div className="flex-row">
-						<div className="col"></div>
-						<div className="col"></div>
+						<div className="flex-col"></div>
+						<div className="flex-col"></div>
 					</div>
 					<div className="flex-row">
-						<div className="col"></div>
-						<div className="col"></div>
+						<div className="flex-col"></div>
+						<div className="flex-col"></div>
 					</div>
 				</div>
-
-				<iframe
-					id="JotFormIFrame-220643511302339"
-					title="Blue Sky Contact Form"
-					onLoad="window.parent.scrollTo(0,0)"
-					allowTransparency="true"
-					allowFullScreen="true"
-					allow="geolocation; microphone; camera"
-					src="https://form.jotform.com/220643511302339"
-					frameBorder="0"
-					style={{ minWidth: '100%', height: '539px', border: 'none' }}
-					scrolling="no"
-				/>
-				{/* <div id="form-wrapper" className="col">
+				<div className="flex-col">
+					<div className="flex-row">
+						<iframe
+							id="JotFormIFrame-220643511302339"
+							title="Blue Sky Contact Form"
+							// onLoad="window.parent.scrollTo(0,0)"
+							allowTransparency="true"
+							allowFullScreen="true"
+							allow="geolocation; microphone; camera"
+							src="https://form.jotform.com/220643511302339"
+							frameBorder="0"
+							style={{ minWidth: '100%', height: '539px', border: 'none' }}
+							scrolling="no"
+						/>
+					</div>
+					<div className="hide-banner"></div>
+				</div>
+				{/* <div id="form-wrapper" className="flex-col">
 					<div className="flex-row">
 						<form autocomplete="on">
 							<div class="form-inputs row">
@@ -174,6 +178,7 @@ export default function Contact() {
 					</div>
 				</div> */}
 			</div>
+			<div className="flex-row flex-center">&copy; {new Date().getFullYear()} | Steepens</div>
 		</div>
 	)
 }
