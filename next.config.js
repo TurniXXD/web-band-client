@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   //reactStrictMode: true,
-  distDir: 'dist/functions/next',
+
   async rewrites() {
     return [
       {
