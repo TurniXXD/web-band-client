@@ -111,57 +111,65 @@ musicProgressBar.addEventListener('click', (e) => {
 
 audio.addEventListener('ended', nextSong) */
 
-const playSong = (song) => {
-
-}
+const playSong = (song) => {}
 
 // next song => fetch song with id +1
 
 export default function Music({ songs }) {
-  return (
-    <div id="tvorba" className="content container">
-      <h1>Music</h1>
-      <div  id="music-player-container" className="content col flex-center">
-        <div className="img-container">
-          <Image src={songs?.albumCover[0].formats?.small.url || placeholder} alt={songs?.albumCover[0].formats?.small.name} id="music-cover" className="rounded-img" width="200" height="200" />
-        </div>
-        <audio src="" id="audio"></audio>
-        <span id="music-title"></span>
-        <div className="music-nav row flex-center">
-            <div className="col flex-center">
-                <span id="prev" className="action-btn typcn typcn-media-rewind-outline flex-center"></span>
-            </div>
-            <div className="col flex-center">
-                <span id="play" className="action-btn typcn typcn-media-play-outline flex-center"></span>
-            </div>
-            <div className="col flex-center">
-                <span id="next" className="action-btn typcn typcn-media-fast-forward-outline flex-center"></span>
-            </div>
-        </div>
-        <div className="progress-container col">
-            <div id="music-progress" className="row">
-                <div id="music-progress-bar"></div>
-            </div>
-            <div className="music-progress-time row">
-                <div id="start-time" className="col">00:00</div>
-                <div id="end-time" className="col">03:24</div>
-            </div>
-        </div>
-      </div>
-        <div id="song-list-wrapper" className="row">
-          <div className="col">
-            {songs && songs.map((song) => {
-              return (
-                <div key={song?.id} className="row">
-                  <button onlick={playSong()}>
-
-                  </button>
-                  <span>{song?.title}</span> <br/>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-    </div>
-  )
+	return (
+		<div id="tvorba" className="content container">
+			<h1>Music</h1>
+			<div id="music-player-container" className="content col flex-center">
+				<div className="img-container">
+					<Image
+						src={songs?.albumCover[0].formats?.small.url || placeholder}
+						alt={songs?.albumCover[0].formats?.small.name}
+						id="music-cover"
+						className="rounded-img"
+						width="200"
+						height="200"
+					/>
+				</div>
+				<audio src="" id="audio"></audio>
+				<span id="music-title"></span>
+				<div className="music-nav row flex-center">
+					<div className="col flex-center">
+						<span id="prev" className="action-btn typcn typcn-media-rewind-outline flex-center"></span>
+					</div>
+					<div className="col flex-center">
+						<span id="play" className="action-btn typcn typcn-media-play-outline flex-center"></span>
+					</div>
+					<div className="col flex-center">
+						<span id="next" className="action-btn typcn typcn-media-fast-forward-outline flex-center"></span>
+					</div>
+				</div>
+				<div className="progress-container col">
+					<div id="music-progress" className="flex-row">
+						<div id="music-progress-bar"></div>
+					</div>
+					<div className="music-progress-time row">
+						<div id="start-time" className="col">
+							00:00
+						</div>
+						<div id="end-time" className="col">
+							03:24
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="song-list-wrapper" className="flex-row">
+				<div className="col">
+					{songs &&
+						songs.map((song) => {
+							return (
+								<div key={song?.id} className="flex-row">
+									<button onlick={playSong()}></button>
+									<span>{song?.title}</span> <br />
+								</div>
+							)
+						})}
+				</div>
+			</div>
+		</div>
+	)
 }
