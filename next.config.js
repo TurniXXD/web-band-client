@@ -1,16 +1,16 @@
 const path = require('path')
 
 module.exports = {
-  //reactStrictMode: true,
+  reactStrictMode: true,
 
-  async rewrites() {
-    return [
-      {
-        source: '/:any*',
-        destination: '/',
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/:any*',
+  //       destination: '/',
+  //     },
+  //   ];
+  // },
   env: {
     API_URL: process.env.API_URL,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
@@ -25,15 +25,15 @@ module.exports = {
     imageSizes: [16, 32, 48, 64, 96], */
 /*     loader: 'cloudinary',
     path: `https://${process.env.IMAGES_DOMAIN}/${process.env.IMAGES_DOMAIN_USERNAME}/`, */
-    loader: 'cloudinary',
+    //loader: 'cloudinary',
     domains: [ 'localhost', process.env.IMAGES_DOMAIN],
   },
-  webpack: config => {
+/*   webpack: config => {
     config.resolve.alias['components'] = path.join(__dirname, 'components')
     config.resolve.alias['public'] = path.join(__dirname, 'public')
 
     return config
-  },
+  }, */
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
