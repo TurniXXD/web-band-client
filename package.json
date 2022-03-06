@@ -4,10 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "lint": "next lint",
-    "export": "next build && next export",
-    "deploy": "npx nx build my-app --prod && rm package.json && mv -v dist/apps/my-app/.next .next && mv -v dist/apps/my-app/package.json package.json && mv -v dist/apps/my-app/next.config.js next.config.js"
+    "start": "next start",
+    "build": "next build && next export",
+    "lint": "next lint"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.13.0",
