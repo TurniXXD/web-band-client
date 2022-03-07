@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 :root {
-	--red: #B70101;
-	--red-glow: #e71111af;
-	--red-corner-glow-1: #5a0000;
-	--white: #ffffff;
-	--black: #000000;
-	--black-light: #111111;
-	--grey: rgb(5, 4, 4);
-	--grey-dark: rgb(43, 37, 37);
+  --red: #B70101;
+  --red-glow: #e71111af;
+  --red-corner-glow-1: #5a0000;
+  --white: #ffffff;
+  --black: #000000;
+  --black-light: #111111;
+  --grey: rgb(5, 4, 4);
+  --grey-dark: rgb(43, 37, 37);
 }
 
 * {
   box-sizing: border-box;
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 html,
@@ -27,8 +27,8 @@ body {
 }
 
 body {
-	overflow-x: hidden;
-	background: var(--black);
+  overflow-x: hidden;
+  background: var(--black);
 }
 
 a {
@@ -53,6 +53,11 @@ a {
   justify-content: center;
 }
 
+.text-xl-1-5 {
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+}
+
 .rounded-img {
   border-radius: 50%;
 }
@@ -66,46 +71,83 @@ a {
 }
 
 .card-wrapper>div {
-	background: var(--black) !important;
-	padding: 0 !important;
-	width: unset !important;
+  background: var(--black) !important;
+  padding: 0 !important;
+  width: unset !important;
 }
 
 .card {
-	position:relative;
-	border: 2px solid var(--red);
-	transition: all .3s ease;
-	background: var(--black-light);
-	padding: 2rem;
-	box-shadow: 0 0 35px var(--red-glow);
+  position: relative;
+  border: 2px solid var(--red);
+  transition: all .3s ease;
+  background: var(--black-light);
+  padding: 2rem;
+  box-shadow: 0 0 35px var(--red-glow);
 }
 
 .card-corner-tl:after {
   content: "";
-  position:absolute;
-	top: 0;
-	left: 0;
-  margin:-20px;
-  width:40px;
-  height:40px;
-  transform:rotate(45deg);
-	background: linear-gradient(90deg, var(--black) 20%, var(--red-corner-glow-1));
-	border-right: 2px solid var(--red);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: -20px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  background: linear-gradient(90deg, var(--black) 20%, var(--red-corner-glow-1));
+  border-right: 2px solid var(--red);
 }
 
 .card-corner-br:after {
   content: "";
-  position:absolute;
-	bottom: 0;
-	right: 0;
-  margin:-20px;
-  width:40px;
-  height:40px;
-  transform:rotate(45deg);
-	background: linear-gradient(-90deg, var(--black) 20%, var(--red-corner-glow-1));
-	border-left: 2px solid var(--red);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: -20px;
+  width: 40px;
+  height: 40px;
+  transform: rotate(45deg);
+  background: linear-gradient(-90deg, var(--black) 20%, var(--red-corner-glow-1));
+  border-left: 2px solid var(--red);
 }
 
 .person:first-child {
-	margin-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.gallery-cards-wrapper>div>div>div>div {
+  padding: 0;
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1536px;
+  }
+
+  #clenove>div>div:nth-child(4) {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  #clenove>div>div:nth-child(3), #clenove>div>div:nth-child(5) {
+    margin-left: 0 !important;
+  }
+
+  .gallery-cards-wrapper>div:last-child {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #clenove>div>div:nth-child(2), #clenove>div>div:nth-child(4) {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #clenove>div>div {
+    margin-left: 0 !important;
+    margin-top: 4rem;
+  }
 }

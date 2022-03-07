@@ -26,7 +26,8 @@
     "react-vanilla-tilt": "^1.0.0",
     "responsive-loader": "^2.3.0",
     "responsive-loader-sharp": "^0.8.0",
-    "sharp": "^0.28.3"
+    "sharp": "^0.28.3",
+    "typicons.font": "^2.1.2"
   },
   "devDependencies": {
     "@types/prop-types": "^15.7.4",

@@ -4852,6 +4852,11 @@ typescript@^4.6.2:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
   integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
 
+typicons.font@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/typicons.font/-/typicons.font-2.1.2.tgz#7f712c785b717c17e478e4874964a033ce7ed37f"
+  integrity sha512-M3HvpFFs24PuCoV16QFKCcPXOMOCiAqcEIchgLBAdewHh2C5krP4clZ0HR4d8glWLOctz8Ak7IlZotNwmYfd5g==
+
 unbox-primitive@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/unbox-primitive/-/unbox-primitive-1.0.1.tgz#085e215625ec3162574dc8859abee78a59b14471"

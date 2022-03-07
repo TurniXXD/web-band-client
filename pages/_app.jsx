@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import { createContext } from 'react'
 
+import 'typicons.font/src/font/typicons.css'
 import '../styles/globals.css'
 
 export const GlobalContext = createContext({})

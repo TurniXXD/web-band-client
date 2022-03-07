@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Link from 'next/link'
 import styles from 'styles/Contact.module.css'
 
 export default function Contact() {
@@ -177,7 +178,37 @@ export default function Contact() {
 					</div>
 				</div> */}
 			</div>
-			<div className="flex-row flex-center mb-4">&copy; {new Date().getFullYear()} | Steepens</div>
+			<div className="flex-row flex-center space-x-8 -mt-12 z-10 relative">
+				<div className="flex-col">
+					<Link href="https://www.facebook.com/steepensband">
+						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+							<span className="typcn typcn-social-facebook-circular text-4xl"></span>
+						</a>
+					</Link>
+				</div>
+				<div className="flex-col">
+					<Link href="https://www.instagram.com/steepensband">
+						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+							<span className="typcn typcn-social-instagram-circular text-4xl"></span>
+						</a>
+					</Link>
+				</div>
+				<div className="flex-col">
+					<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
+						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+							<span className="typcn typcn-social-youtube-circular text-4xl"></span>
+						</a>
+					</Link>
+				</div>
+				<div className="flex-col">
+					<Link href="mailto:kontakt@steepensband.eu">
+						<a className="nav-item mb-1">
+							<span className="typcn typcn-mail text-4xl"></span>
+						</a>
+					</Link>
+				</div>
+			</div>
+			<div className="flex-row flex-center mb-4 mt-6">&copy; {new Date().getFullYear()} | Steepens</div>
 		</div>
 	)
 }
