@@ -1,4 +1,6 @@
 import React from 'react'
+import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 import Link from 'next/link'
 import ScrollUpBtn from '@components/ScrollUpBtn'
 import Navigation from '@components/Navigation'
@@ -17,6 +19,62 @@ import styles from 'styles/Home.module.css'
 
 export default function Home(/* { global, songs, people, photos, posts } */) {
 	return (
+	<>
+		<NextSeo
+			title=/* {global?.metaTitle} */"Steepens"
+			description={/* global?.metaDescription */"Česká hard rocková kapela z Frýdku-Místku"}
+			canonical={/* global?.url */"https://steepensband.eu/"}
+			openGraph={{
+				url: `${/* global?.url */""}https://steepensband.eu/`,
+				title: `${/* global?.metaTitle */""}Steepens`,
+				description: `${/* global?.metaDescription */""}Česká hard rocková kapela z Frýdku-Místku`,
+				// images: [
+				// 	{
+				// 		url: `${global?.shareImage[0]?.formats?.large.url}`,
+				// 		width: `${global?.shareImage[0]?.formats?.large.width}`,
+				// 		height: `${global?.shareImage[0]?.formats?.large.height}`,
+				// 		alt: `${global?.shareImage[0]?.formats?.large.name}`,
+				// 	},
+				// 	{
+				// 		url: `${global?.shareImage[0]?.formats?.medium.url}`,
+				// 		width: `${global?.shareImage[0]?.formats?.medium.width}`,
+				// 		height: `${global?.shareImage[0]?.formats?.medium.height}`,
+				// 		alt: `${global?.shareImage[0]?.formats?.medium.name}`,
+				// 	},
+				// 	{
+				// 		url: `${global?.shareImage[0]?.formats?.small.url}`,
+				// 		width: `${global?.shareImage[0]?.formats?.small.width}`,
+				// 		height: `${global?.shareImage[0]?.formats?.small.height}`,
+				// 		alt: `${global?.shareImage[0]?.formats?.small.name}`,
+				// 	},
+					images: [
+						{
+							url: '/public/images/steepens-logo-rectangle.png',
+							width: 1000,
+							height: 1000,
+							alt: 'Steepens',
+						},
+						{
+							url: '/public/images/steepens-logo-rectangle.png',
+							width: 750,
+							height: 750,
+							alt: 'Steepens',
+						},
+						{
+							url: '/public/images/steepens-logo-rectangle.png',
+							width: 500,
+							height: 500,
+							alt: 'Steepens',
+						}
+				],
+				site_name: /* `${global?.siteName}` */"Steepens",
+			}}
+		/>
+		<Head>
+			<link rel="shortcut icon" href=/* {global?.favicon[0]?.url} */"/static/favicon.ico" />
+			<meta name="theme-color" content={/* global?.primaryColor */"#B70101"} />
+			<meta name="author" content="https://github.com/TurniXXD" />
+		</Head>
 		<div className="page-wrapper">
 			{/* <ScrollUpBtn /> */}
 			<div className="container flex-center py-20">
@@ -122,6 +180,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 			</div>
 			<Footer />
 		</div>
+	</>
 	)
 }
 

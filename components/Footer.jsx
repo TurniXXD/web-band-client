@@ -114,11 +114,8 @@ export default function Contact() {
 					<div className="flex-row">
 						<iframe
 							id="JotFormIFrame-220643511302339"
-							title="Blue Sky Contact Form"
-							// onLoad="window.parent.scrollTo(0,0)"
-							allowTransparency="true"
-							allowFullScreen="true"
-							allow="geolocation; microphone; camera"
+							allowtransparency="true"
+							allowFullScreen={true}
 							src="https://form.jotform.com/220643511302339"
 							frameBorder="0"
 							style={{ minWidth: '100%', height: '539px', border: 'none' }}
