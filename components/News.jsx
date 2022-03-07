@@ -7,7 +7,7 @@ import placeholder from '../public/steepens-logo-rectangle.png'
 
 export default function News({ posts }) {
 	return (
-		<div id="aktuality" className="content container">
+		<div id="aktuality" className="container">
 			<h1>News</h1>
 			<div id="news-wrapper">
 				{posts &&

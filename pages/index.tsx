@@ -17,16 +17,11 @@ import styles from 'styles/Home.module.css'
 export default function Home(/* { global, songs, people, photos, posts } */) {
 	return (
 		<div className="page-wrapper">
-			<ScrollUpBtn />
-			<div className="content container">
+			{/* <ScrollUpBtn /> */}
+			<div className="container flex-center py-20">
 				<Image src={hero} width="1000" height="500" alt="hero" />
 			</div>
-			<div id="clenove" className="content container flex-col flex-center">
-				<div className="flex-row flex-center mb-8">
-					<div className="flex-col">
-						<h2 className="text-4xl">Naše banda</h2>
-					</div>
-				</div>
+			<div id="clenove" className="container flex-col flex-center">
 				<div className="flex-row flex-wrap flex-center">
 					{/* 						<Image
 							src={people?.image[0].formats?.small.url || placeholder}
@@ -67,7 +62,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 					})}
 				</div>
 			</div>
-			<div id="foto" className="content container">
+			<div id="foto" className="container">
 				<div id="gallery-wraper">
 					<div className="flex-col">
 						{/* 							{photos &&

@@ -97,9 +97,8 @@ export default function Contact() {
 	}, [])
 
 	return (
-		<div id="kontakt" className="content container">
-			<h1>kontakt</h1>
-			<div className="flex-row">
+		<div id="kontakt" className="container mt-20">
+			<div className="flex-row flex-center">
 				<div id="socials-wrapper" className="flex-col">
 					<div className="flex-row">
 						<div className="flex-col"></div>
@@ -178,7 +177,7 @@ export default function Contact() {
 					</div>
 				</div> */}
 			</div>
-			<div className="flex-row flex-center">&copy; {new Date().getFullYear()} | Steepens</div>
+			<div className="flex-row flex-center mb-4">&copy; {new Date().getFullYear()} | Steepens</div>
 		</div>
 	)
 }

@@ -117,9 +117,9 @@ const playSong = (song) => {}
 
 export default function Music({ songs }) {
 	return (
-		<div id="tvorba" className="content container">
+		<div id="tvorba" className="container">
 			<h1>Music</h1>
-			<div id="music-player-container" className="content col flex-center">
+			<div id="music-player-container" className="col flex-center">
 				<div className="img-container">
 					<Image
 						src={songs?.albumCover[0].formats?.small.url || placeholder}

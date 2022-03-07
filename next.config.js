@@ -2,21 +2,12 @@ const path = require('path')
 
 module.exports = {
   reactStrictMode: true,
-
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/:any*',
-  //       destination: '/',
-  //     },
-  //   ];
-  // },
   env: {
     API_URL: process.env.API_URL,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
     IMAGES_LOADER: process.env.IMAGES_LOADER
-  }, /*
-  publicRuntimeConfig: {
+  }, 
+  /*publicRuntimeConfig: {
     API_URL: process.env.API_URL,
     IMAGES_DOMAIN: process.env.IMAGES_DOMAIN
   }, */
@@ -35,8 +26,6 @@ module.exports = {
     return config
   }, */
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
 }
