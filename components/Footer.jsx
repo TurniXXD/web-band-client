@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Link from 'next/link'
 import styles from 'styles/Contact.module.css'
+import Card from '@components/Card'
 
 export default function Contact() {
 	useEffect(() => {
@@ -100,14 +101,46 @@ export default function Contact() {
 	return (
 		<div id="kontakt" className="container mt-20">
 			<div className="flex-row flex-center">
-				<div id="socials-wrapper" className="flex-col">
-					<div className="flex-row">
-						<div className="flex-col"></div>
-						<div className="flex-col"></div>
+				<div id="socials-wrapper" className="footer-desktop flex-col flex-wrap mr-8">
+					<div className="flex-row flex-center space-x-8 z-10 relative">
+						<Link href="https://www.facebook.com/steepensband">
+							<div className="flex-col">
+								<Card>
+									<a target="_blank" rel="noreferrer noopener" className="nav-item">
+										<span className="typcn typcn-social-facebook-circular text-4xl"></span>
+									</a>
+								</Card>
+							</div>
+						</Link>
+						<Link href="https://www.instagram.com/steepensband">
+							<div className="flex-col">
+								<Card>
+									<a target="_blank" rel="noreferrer noopener" className="nav-item">
+										<span className="typcn typcn-social-instagram-circular text-4xl"></span>
+									</a>
+								</Card>
+							</div>
+						</Link>
 					</div>
-					<div className="flex-row">
-						<div className="flex-col"></div>
-						<div className="flex-col"></div>
+					<div className="flex-row flex-center space-x-8 mt-10 z-10 relative">
+						<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
+							<div className="flex-col">
+								<Card>
+									<a target="_blank" rel="noreferrer noopener" className="nav-item">
+										<span className="typcn typcn-social-youtube-circular text-4xl"></span>
+									</a>
+								</Card>
+							</div>
+						</Link>
+						<Link href="mailto:kontakt@steepensband.eu">
+							<div className="flex-col">
+								<Card>
+									<a className="nav-item mb-1">
+										<span className="typcn typcn-mail text-4xl"></span>
+									</a>
+								</Card>
+							</div>
+						</Link>
 					</div>
 				</div>
 				<div className="flex-col">
@@ -175,7 +208,7 @@ export default function Contact() {
 					</div>
 				</div> */}
 			</div>
-			<div className="flex-row flex-center space-x-8 -mt-12 z-10 relative">
+			<div className="footer-mobile flex-row flex-center space-x-8 -mt-12 z-10 relative">
 				<div className="flex-col">
 					<Link href="https://www.facebook.com/steepensband">
 						<a target="_blank" rel="noreferrer noopener" className="nav-item">

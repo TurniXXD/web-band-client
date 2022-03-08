@@ -119,6 +119,10 @@ a {
   padding: 0;
 }
 
+#socials-wrapper>div>div:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1536px;
@@ -142,6 +146,21 @@ a {
 @media (max-width: 1024px) {
   #clenove>div>div:nth-child(2), #clenove>div>div:nth-child(4) {
     margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-desktop {
+    display: flex;
+  }
+  .footer-mobile {
+    display: none;
   }
 }
 
