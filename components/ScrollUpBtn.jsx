@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import scrollUp from '../public/scroll-up-btn.png'
 
 export default function ScrollUpBtn() {
 const [scrollToTop, setScrollToTop] = useState(false)
@@ -13,7 +14,7 @@ const [scrollToTop, setScrollToTop] = useState(false)
 	return (
 		<div className="scroll-up-btn-wrapper">
 			<button id="scroll-up-btn" title="Jít nahoru" onClick={() => setScrollToTop(true)}>
-				<Image src="/public/steepens-logo-rectangle.png" width="75" height="75" alt="Jít nahoru" />
+				<Image src={scrollUp} width="35" height="55" alt="Jít nahoru" />
 			</button>
 		</div>
 	)

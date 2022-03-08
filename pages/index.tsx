@@ -75,8 +75,8 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 			<meta name="theme-color" content={/* global?.primaryColor */"#B70101"} />
 			<meta name="author" content="https://github.com/TurniXXD" />
 		</Head>
+		<ScrollUpBtn />
 		<div className="page-wrapper">
-			{/* <ScrollUpBtn /> */}
 			<div className="container flex-center py-20">
 				<Image src={hero} width="1000" height="500" alt="hero" />
 			</div>

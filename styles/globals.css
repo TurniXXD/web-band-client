@@ -70,6 +70,10 @@ a {
   z-index: 2;
 }
 
+.page-wrapper {
+  transition: all .3s ease;
+}
+
 .card-wrapper>div {
   background: var(--black) !important;
   padding: 0 !important;
@@ -123,6 +127,57 @@ a {
   cursor: pointer;
 }
 
+/* SCROLLUP BTN */
+
+#scrollup-btn {
+	font-size: 30px;
+	padding: 0 5px 0 5px;
+	border-radius: 40px;
+	background-color: var(--violet);
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	height: 50px;
+	width: 50px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+	z-index: 1000;
+	display: none;
+}
+
+#scrollup-btn > span:after {
+	color: black !important;
+	mix-blend-mode: difference;
+}
+
+#scrollup-btn:hover {
+	background-color: var(--violet-light);
+	cursor: pointer;
+}
+
+#scrollup-btn > span {
+	z-index: 1;
+	color: white !important;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 5px 15px 5px 15px;
+}
+
+#scrollup-btn:hover > span {
+	animation-name: arrowGoBrrBackwards;
+	animation-duration: 0.4s;
+}
+
+.scroll-up-btn-wrapper {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* SCROLLUP BTN */
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1536px;
@@ -169,4 +224,29 @@ a {
     margin-left: 0 !important;
     margin-top: 4rem;
   }
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	background: var(--red);
+}
+
+/* Track */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+	background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #4c516b;
+	border-radius: 6px;
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-left: 4px var(--violet-darker) solid;
+	border-right: 4px var(--violet-darker) solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #727897;
 }
