@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Orbitron:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,8 +17,7 @@
 * {
   box-sizing: border-box;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Cinzel', serif;
 }
 
 html,
@@ -85,7 +85,6 @@ a {
   border: 2px solid var(--red);
   transition: all .3s ease;
   background: var(--black-light);
-  padding: 2rem;
   box-shadow: 0 0 35px var(--red-glow);
 }
 
@@ -100,6 +99,7 @@ a {
   transform: rotate(45deg);
   background: linear-gradient(90deg, var(--black) 20%, var(--red-corner-glow-1));
   border-right: 2px solid var(--red);
+  z-index: 1000;
 }
 
 .card-corner-br:after {
@@ -113,61 +113,91 @@ a {
   transform: rotate(45deg);
   background: linear-gradient(-90deg, var(--black) 20%, var(--red-corner-glow-1));
   border-left: 2px solid var(--red);
+  z-index: 1000;
+}
+
+#aktuality>.cards-wrapper>div>.card-wrapper>div>.card>div>div:first-child>div {
+  margin-bottom: -7px;
 }
 
 .person:first-child {
   margin-left: 0 !important;
 }
 
-.gallery-cards-wrapper>div>div>div>div {
-  padding: 0;
+#galerie>.cards-wrapper>div>.card-wrapper>div>.card>div {
+  margin-bottom: -9px;
 }
+
+#kontakt>div>#socials-wrapper>div>a>div>.card-wrapper>div>.card {
+  padding: 2rem;
+}
+
 
 #socials-wrapper>div>div:hover {
   cursor: pointer;
 }
 
+#kontakt>div>#socials-wrapper>div:first-child>a:first-child:hover>div>.card-wrapper>div>.card {
+  background: #4267b2;
+}
+
+#kontakt>div>#socials-wrapper>div:first-child>a:last-child:hover>div>.card-wrapper>div>.card {
+  background: #e4405f;
+}
+
+#kontakt>div>#socials-wrapper>div:last-child>a:first-child:hover>div>.card-wrapper>div>.card {
+  background: #ff0000;
+}
+
+/* #kontakt>div>#socials-wrapper>div:last-child>a:last-child>div>.card-wrapper>div>.card>span {
+
+} */
+
+#kontakt>div>#socials-wrapper>div:last-child>a:last-child:hover>div>.card-wrapper>div>.card {
+  background: #EDB000;
+}
+
 /* SCROLLUP BTN */
 
 #scrollup-btn {
-	font-size: 30px;
-	padding: 0 5px 0 5px;
-	border-radius: 40px;
-	background-color: var(--violet);
-	position: fixed;
-	bottom: 25px;
-	right: 25px;
-	height: 50px;
-	width: 50px;
-	overflow: hidden;
-	transition: all 0.5s ease-in-out;
-	z-index: 1000;
-	display: none;
+  font-size: 30px;
+  padding: 0 5px 0 5px;
+  border-radius: 40px;
+  background-color: var(--violet);
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  z-index: 1000;
+  display: none;
 }
 
-#scrollup-btn > span:after {
-	color: black !important;
-	mix-blend-mode: difference;
+#scrollup-btn>span:after {
+  color: black !important;
+  mix-blend-mode: difference;
 }
 
 #scrollup-btn:hover {
-	background-color: var(--violet-light);
-	cursor: pointer;
+  background-color: var(--violet-light);
+  cursor: pointer;
 }
 
-#scrollup-btn > span {
-	z-index: 1;
-	color: white !important;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	padding: 5px 15px 5px 15px;
+#scrollup-btn>span {
+  z-index: 1;
+  color: white !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 15px 5px 15px;
 }
 
-#scrollup-btn:hover > span {
-	animation-name: arrowGoBrrBackwards;
-	animation-duration: 0.4s;
+#scrollup-btn:hover>span {
+  animation-name: arrowGoBrrBackwards;
+  animation-duration: 0.4s;
 }
 
 .scroll-up-btn-wrapper {
@@ -178,30 +208,33 @@ a {
 
 /* SCROLLUP BTN */
 
+#kapela>div>div:nth-child(3), #kapela>div>div:nth-child(5) {
+  margin-left: 0 !important;
+}
+
 @media (min-width: 1280px) {
   .container {
     max-width: 1536px;
   }
-
-  #clenove>div>div:nth-child(4) {
-    margin-left: 0 !important;
-  }
 }
 
 @media (max-width: 1280px) {
-  #clenove>div>div:nth-child(3), #clenove>div>div:nth-child(5) {
+  /* #kapela>div>div:nth-child(3), #kapela>div>div:nth-child(5) {
     margin-left: 0 !important;
-  }
+  } */
 
-  .gallery-cards-wrapper>div:last-child {
+  .cards-wrapper>div:last-child {
     margin-top: 3rem;
   }
 }
 
-@media (max-width: 1024px) {
-  #clenove>div>div:nth-child(2), #clenove>div>div:nth-child(4) {
+@media (min-width: 1535px) {}
+
+@media (max-width: 1900px) {
+  /* #kapela>div>div:nth-child(2), #kapela>div>div:nth-child(4) {
     margin-left: 0 !important;
-  }
+  } */
+
 }
 
 @media (max-width: 768px) {
@@ -214,39 +247,40 @@ a {
   .footer-desktop {
     display: flex;
   }
+
   .footer-mobile {
     display: none;
   }
 }
 
 @media (max-width: 640px) {
-  #clenove>div>div {
+  #kapela>div>div {
     margin-left: 0 !important;
     margin-top: 4rem;
   }
 }
 
 ::-webkit-scrollbar {
-	width: 7px;
-	background: var(--red);
+  width: 7px;
+  background: var(--red);
 }
 
 /* Track */
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-track-piece {
-	background: none;
+  background: none;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-	background: #4c516b;
-	border-radius: 6px;
-	border-top-left-radius: 6px;
-	border-bottom-left-radius: 6px;
-	border-left: 4px var(--violet-darker) solid;
-	border-right: 4px var(--violet-darker) solid;
+  background: #4c516b;
+  border-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-left: 4px var(--violet-darker) solid;
+  border-right: 4px var(--violet-darker) solid;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #727897;
+  background: #727897;
 }
