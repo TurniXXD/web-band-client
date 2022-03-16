@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Orbitron:wght@500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'cinzel';
+  src: url('/fonts/Cinzel/Cinzel-VariableFont_wght.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 
 :root {
   --red: #B70101;
@@ -120,8 +127,24 @@ a {
   margin-bottom: -7px;
 }
 
+.aktuality-image, .aktuality-partners-images>.flex-col, .aktuality-p {
+  display: none;
+}
+
+.aktuality-image-mobile {
+  display: flex;
+}
+
 .person:first-child {
   margin-left: 0 !important;
+}
+
+.person-favorite-music-mobile {
+  display: flex;
+}
+
+.person-favorite-music {
+  display: none;
 }
 
 #galerie>.cards-wrapper>div>.card-wrapper>div>.card>div {
@@ -171,7 +194,7 @@ a {
   width: 50px;
   overflow: hidden;
   transition: all 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 10000;
   display: none;
 }
 
@@ -204,6 +227,7 @@ a {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
+  display: none;
 }
 
 /* SCROLLUP BTN */
@@ -228,7 +252,11 @@ a {
   }
 }
 
-@media (min-width: 1535px) {}
+@media (min-width: 1536px) {
+  .aktuality-image {
+    display: flex;
+  }
+}
 
 @media (max-width: 1900px) {
   /* #kapela>div>div:nth-child(2), #kapela>div>div:nth-child(4) {
@@ -257,6 +285,22 @@ a {
   #kapela>div>div {
     margin-left: 0 !important;
     margin-top: 4rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .aktuality-partners-images, .aktuality-partners-images>.flex-col, .person-favorite-music, .scroll-up-btn-wrapper {
+    display: flex;
+  }
+  
+  .aktuality-image-mobile, .person-favorite-music-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 488px) {
+  .aktuality-p {
+    display: flex;
   }
 }
 

@@ -10,7 +10,7 @@ export const people = [
 				band: 'Seether',
 			},
 			{
-				band: 'Red Hot Chilli Peppers',
+				band: 'Red Hot Chili Peppers',
 			},
 			{
 				band: 'Motionless in while',
@@ -67,7 +67,7 @@ export const people = [
 				band: 'Horkýže slíže',
 			},
 			{
-				band: 'Red Hot Chilli Peppers',
+				band: 'Red Hot Chili Peppers',
 			},
 		],
 	},

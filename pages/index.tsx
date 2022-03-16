@@ -40,12 +40,12 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 		<>
 			<NextSeo
 				title=/* {global?.metaTitle} */"Steepens"
-				description={/* global?.metaDescription */"Česká hard rocková kapela z Frýdku-Místku"}
+				description={/* global?.metaDescription */"Jsme Hard & Heavy kapela Steepens z Frýdku-Místku, a přinášíme vám vlastní tvorbu tvrdého i lehčího stylu."}
 				canonical={/* global?.url */"https://steepensband.eu/"}
 				openGraph={{
 					url: `${/* global?.url */""}https://steepensband.eu/`,
 					title: `${/* global?.metaTitle */""}Steepens`,
-					description: `${/* global?.metaDescription */""}Česká hard rocková kapela z Frýdku-Místku`,
+					description: `${/* global?.metaDescription */""}Jsme Hard & Heavy kapela Steepens z Frýdku-Místku, a přinášíme vám vlastní tvorbu tvrdého i lehčího stylu.`,
 					// images: [
 					// 	{
 					// 		url: `${global?.shareImage[0]?.formats?.large.url}`,
@@ -98,8 +98,8 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 				<div className="container flex-center py-20">
 					<Image src={hero} width="1000" height="750" alt="hero" />
 				</div>
-				<div id="aktuality" className="container mt-32">
-					<div className="flex-row flex-center mb-20">
+				<div id="aktuality" className="container mt-4 sm:mt-32">
+					<div className="flex-row flex-center mb-4 sm:mb-20">
 						<div className="flex-col">
 							<h2 className="text-5xl sm:text-6xl">Aktuality</h2>
 						</div>
@@ -107,14 +107,19 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 					<div className="cards-wrapper flex flex-wrap flex-center xl:space-x-28">
 						<div className="flex-col flex-center w-full">
 							<Card>
+								<div className="flex-row aktuality-image-mobile">
+									<div>
+										<Image src={debutPoster} width="707" height="1000" alt="hero" />
+									</div>
+								</div>
 								<div className="flex-row">
-									<div className="flex-col">
+									<div className="flex-col aktuality-image">
 										<div>
 											<Image src={debutPoster} width="707" height="1000" alt="hero" />
 										</div>
 									</div>
-									<div className="flex-col p-12">
-										<div className="flex-row-reverse">
+									<div className="flex-col py-8 px-5 sm:p-12">
+										<div className="flex-row-reverse aktuality-partners-images">
 											<div className="flex-col flex-center ml-8">
 												<Link href="https://www.facebook.com/kapelazostra/">
 													<a target="_blank" rel="noreferrer noopener">
@@ -142,10 +147,10 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 										</div>
 										<div className="flex-row">
 											<div className="flex-col">
-												<span className="text-xl">7.5.2022 - OSTRAVA</span>
+												<span className="text-base sm:text-xl">7.5.2022 - OSTRAVA</span>
 											</div>
 										</div>
-										<div className="flex-row mt-6">
+										<div className="aktuality-p flex-row mt-6">
 											<p>
 												Po dlouhé době zkoušení a překážkách v tvorbě nás čeká první představení naší hard & heavy tvorby v klubu Rock Hill v Ostravě. Společně s námi zahraje zkušená Punk'n'Rollová kapela Positive, se kterými zahraje, místním i přespolním dosti známá formace, Zostra.
 											</p>
@@ -157,7 +162,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 										</div>
 										<div className="flex-row mt-10">
 											<div className="flex-col">
-												<span className="text-lg">Více informací {' '}
+												<span className="text-base sm:text-lg">Více informací {' '}
 													<Link href="https://www.facebook.com/events/1284569618704405?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D">
 														<a target="_blank" rel="noreferrer noopener">
 															<span className="underline">zde</span>
@@ -172,7 +177,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 						</div>
 					</div>
 				</div>
-				<div id="tvorba" className="container mt-32">
+				<div id="tvorba" className="container mt-20 sm:mt-32">
 					<div className="flex-row flex-center mb-20">
 						<div className="flex-col">
 							<h2 className="text-5xl sm:text-6xl">Tvorba</h2>
@@ -223,13 +228,13 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 						</div>
 					</div>
 				</div>
-				<div id="kapela" className="container flex-col flex-center mt-32">
-					<div className="flex-row flex-center mb-20">
+				<div id="kapela" className="container flex-col flex-center mt-4 sm:mt-32">
+					<div className="flex-row flex-center mb-4 sm:mb-20">
 						<div className="flex-col">
 							<h2 className="text-5xl sm:text-6xl">Kapela</h2>
 						</div>
 					</div>
-					<div className="flex-row flex-wrap flex-center gap-24">
+					<div className="flex-row flex-wrap flex-center gap-16 sm:gap-24">
 						{/* 						<Image
 							src={people?.image[0].formats?.small.url || placeholder}
 							alt={people?.image[0].formats?.small.name}
@@ -255,16 +260,17 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 										<div className="flex-row flex-center mx-8">
 											<span className="text-lg mb-4">{person.position}</span>
 										</div>
-										<div className="flex-row mx-16">
+										<div className="flex-row mx-8 sm:mx-16">
 											<span className="text-lg mb-2">Oblíbená hudba:</span>
 										</div>
-										<div className="flex-row mx-16 mb-8">
+										<div className="flex-row mx-8 sm:mx-16 mb-8">
 											<div className="flex-col">
 												{person.favoriteMusic.map((music: iFavoriteMusic) => {
 													return (
 														<div className="flex-row">
 															<div className="flex-col">
-																<span>{music.band}</span>
+																<span className="person-favorite-music">{music.band}</span>
+																<span className="person-favorite-music-mobile">- {music.band}</span>
 															</div>
 														</div>
 													)
@@ -277,8 +283,8 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 						})}
 					</div>
 				</div>
-				<div id="galerie" className="container mt-32">
-					<div className="flex-row flex-center mb-20">
+				<div id="galerie" className="container mt-20 sm:mt-32">
+					<div className="flex-row flex-center mb-4 sm:mb-20">
 						<div className="flex-col">
 							<h2 className="text-5xl sm:text-6xl">Galerie</h2>
 						</div>

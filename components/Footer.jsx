@@ -250,7 +250,7 @@ export default function Contact() {
 					</Link>
 				</div>
 			</div>
-			<div className="flex-row flex-center mb-4 mt-6">MAIL: kontakt@steepensband.eu</div>
+			<div className="flex-row flex-center mb-4 mt-6 text-sm sm:text-base">MAIL: kontakt@steepensband.eu</div>
 			<div className="flex-row flex-center mb-4 mt-6">&copy; {new Date().getFullYear()} | Steepens</div>
 		</div>
 	)
