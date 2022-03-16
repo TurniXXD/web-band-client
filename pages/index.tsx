@@ -6,6 +6,7 @@ import ScrollUpBtn from '@components/ScrollUpBtn'
 import Navigation from '@components/Navigation'
 import Music from '@components/Music'
 import Card from '@components/Card'
+import LightboxGallery from '@components/LightboxGallery'
 import { people } from '../data/people'
 import { iPeople, iFavoriteMusic } from '../graphql/models/model'
 import { gallery } from '../data/gallery'
@@ -13,6 +14,7 @@ import News from '@components/News'
 import Footer from '@components/Footer'
 import { fetchAPI } from 'lib/api'
 import Image from 'next/image'
+
 import placeholder from 'public/steepens-logo-rectangle.png'
 import hero from 'public/steepens-logo-white.svg'
 import foceni1 from 'public/foceni/1.png'
@@ -295,14 +297,30 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 								<div className="flex-col flex-center w-full sm:w-6/12 mt-12 xl:w-3/12 xl:mt-0">
 									<Card>
 										<div className=" w-60 sm:w-60 h-full">
-											{item.image == 1 && <Image src={foceni1} width="300" height="200" alt="hero" />}
-											{item.image == 2 && <Image src={foceni2} width="300" height="200" alt="hero" />}
-											{item.image == 3 && <Image src={foceni3} width="300" height="200" alt="hero" />}
-											{item.image == 4 && <Image src={foceni4} width="300" height="200" alt="hero" />}
-											{item.image == 5 && <Image src={foceni5} width="300" height="200" alt="hero" />}
-											{item.image == 6 && <Image src={foceni6} width="300" height="200" alt="hero" />}
-											{item.image == 7 && <Image src={foceni7} width="300" height="200" alt="hero" />}
-											{item.image == 8 && <Image src={foceni8} width="300" height="200" alt="hero" />}
+											{item.image == 1 && (
+												<LightboxGallery i={0}><Image src={foceni1} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 2 && (
+												<LightboxGallery i={1}><Image src={foceni2} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 3 && (
+												<LightboxGallery i={2}><Image src={foceni3} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 4 && (
+												<LightboxGallery i={3}><Image src={foceni4} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 5 && (
+												<LightboxGallery i={4}><Image src={foceni5} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 6 && (
+												<LightboxGallery i={5}><Image src={foceni6} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 7 && (
+												<LightboxGallery i={6}><Image src={foceni7} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
+											{item.image == 8 && (
+												<LightboxGallery i={7}><Image src={foceni8} width="300" height="200" alt="hero" /></LightboxGallery>
+											)}
 										</div>
 									</Card>
 								</div>

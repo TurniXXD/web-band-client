@@ -7,6 +7,7 @@ import { createContext } from 'react'
 
 import 'typicons.font/src/font/typicons.css'
 import '../styles/globals.css'
+import 'react-image-lightbox/style.css'
 
 export const GlobalContext = createContext({})
 
