@@ -120,7 +120,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 											<Image src={debutPoster} width="707" height="1000" alt="hero" />
 										</div>
 									</div>
-									<div className="flex-col py-8 px-5 sm:p-12">
+									<div className="flex-col py-4 sm:py-8 px-5 sm:p-12">
 										<div className="flex-row-reverse aktuality-partners-images">
 											<div className="flex-col flex-center ml-8">
 												<Link href="https://www.facebook.com/kapelazostra/">
@@ -143,26 +143,33 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 													</a>
 												</Link>
 											</div>
-											<div className="flex grow items-center">
+											<div className="flex grow items-center aktuality-title">
 												<h2 className="text-xl-1-5 sm:text-6xl mb-2">Debut</h2>
 											</div>
 										</div>
-										<div className="flex-row">
-											<div className="flex-col">
-												<span className="text-base sm:text-xl">7.5.2022 - OSTRAVA</span>
-											</div>
-										</div>
+										<Link href="https://goo.gl/maps/ppDvvjceik2Skrpr9">
+											<a target="_blank" rel="noreferrer noopener">
+												<div className="flex-row">
+													<div className="flex-col">
+														<span className="typcn typcn-location-outline mr-2 text-base sm:text-xl"></span>
+													</div>
+													<div className="flex-col">
+														<span className="text-base sm:text-xl">7.5. 2022 Rock Hill OSTRAVA</span>
+													</div>
+												</div>
+											</a>
+										</Link>
 										<div className="aktuality-p flex-row mt-6">
 											<p>
 												Po dlouhé době zkoušení a překážkách v tvorbě nás čeká první představení naší hard & heavy tvorby v klubu Rock Hill v Ostravě. Společně s námi zahraje zkušená Punk'n'Rollová kapela Positive, se kterými zahraje, místním i přespolním dosti známá formace, Zostra.
 											</p>
 										</div>
-										<div className="flex-row mt-4">
+										<div className="flex-row mt-10 sm:mt-4">
 											<div className="flex-col">
-												<span className="text-lg">Vstupné: 150Kč</span>
+												<span className="text-base sm:text-lg">Vlezné: 150Kč</span>
 											</div>
 										</div>
-										<div className="flex-row mt-10">
+										<div className="flex-row mt-4 sm:mt-10">
 											<div className="flex-col">
 												<span className="text-base sm:text-lg">Více informací {' '}
 													<Link href="https://www.facebook.com/events/1284569618704405?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D">
@@ -245,16 +252,15 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 							height="200"
 						/> */}
 						{people.map((person: iPeople, i: number) => {
-							//sm:ml-12 md:ml-24 sm:mt-12 md:mt-20
 							return (
 								<div className="person flex-col">
 									<Card>
 										<div className="flex-row flex-center">
-											{i == 0 && <Image src={barca} width="400" height="266" alt="hero" />}
-											{i == 1 && <Image src={martin} width="400" height="266" alt="hero" />}
-											{i == 2 && <Image src={kuba} width="400" height="266" alt="hero" />}
-											{i == 3 && <Image src={peta} width="400" height="266" alt="hero" />}
-											{i == 4 && <Image src={izzy} width="400" height="266" alt="hero" />}
+											{i == 0 && <Image src={barca} width="400" height="266" alt="hero" priority={true} />}
+											{i == 1 && <Image src={martin} width="400" height="266" alt="hero" priority={true} />}
+											{i == 2 && <Image src={kuba} width="400" height="266" alt="hero" priority={true} />}
+											{i == 3 && <Image src={peta} width="400" height="266" alt="hero" priority={true} />}
+											{i == 4 && <Image src={izzy} width="400" height="266" alt="hero" priority={true} />}
 										</div>
 										<div className="flex-row flex-center mx-8 mt-8">
 											<h2 className="text-xl-1-5 sm:text-4xl mb-2">{person.name}</h2>
@@ -271,8 +277,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 													return (
 														<div className="flex-row">
 															<div className="flex-col">
-																<span className="person-favorite-music">{music.band}</span>
-																<span className="person-favorite-music-mobile">- {music.band}</span>
+																<span>{music.band}</span>
 															</div>
 														</div>
 													)
@@ -294,32 +299,32 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 					<div className="cards-wrapper flex flex-wrap flex-center xl:gap-y-16">
 						{gallery.map((item: any) => {
 							return (
-								<div className="flex-col flex-center w-full sm:w-6/12 mt-12 xl:w-3/12 xl:mt-0">
+								<div className="gallery-cards flex-col flex-center w-full sm:w-6/12 mt-12 xl:w-3/12 xl:mt-0">
 									<Card>
-										<div className=" w-60 sm:w-60 h-full">
+										<div className="w-60 sm:w-60 h-full">
 											{item.image == 1 && (
-												<LightboxGallery i={0}><Image src={foceni1} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={0}><Image src={foceni1} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 2 && (
-												<LightboxGallery i={1}><Image src={foceni2} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={1}><Image src={foceni2} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 3 && (
-												<LightboxGallery i={2}><Image src={foceni3} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={2}><Image src={foceni3} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 4 && (
-												<LightboxGallery i={3}><Image src={foceni4} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={3}><Image src={foceni4} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 5 && (
-												<LightboxGallery i={4}><Image src={foceni5} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={4}><Image src={foceni5} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 6 && (
-												<LightboxGallery i={5}><Image src={foceni6} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={5}><Image src={foceni6} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 7 && (
-												<LightboxGallery i={6}><Image src={foceni7} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={6}><Image src={foceni7} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 											{item.image == 8 && (
-												<LightboxGallery i={7}><Image src={foceni8} width="300" height="200" alt="hero" /></LightboxGallery>
+												<LightboxGallery i={7}><Image src={foceni8} width="300" height="200" alt="hero" priority={true} /></LightboxGallery>
 											)}
 										</div>
 									</Card>
@@ -327,41 +332,6 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 							)
 						})
 						}
-						{/* <div className="flex-col flex-center w-full mt-12 xl:w-3/12 xl:mt-0">
-							<Card>
-								<div className=" w-60 sm:w-60 h-full">
-									<Image src={foceni2} width="300" height="200" alt="hero" />
-								</div>
-							</Card>
-						</div>
-						<div className="flex-col flex-center w-full mt-12 xl:w-3/12 xl:mt-0">
-							<Card>
-								<div className=" w-60 sm:w-60 h-full">
-									<Image src={foceni3} width="300" height="200" alt="hero" />
-								</div>
-							</Card>
-						</div>
-						<div className="flex-col flex-center w-full mt-12 xl:w-3/12 xl:mt-0">
-							<Card>
-								<div className=" w-60 sm:w-60 h-full">
-									<Image src={foceni4} width="300" height="200" alt="hero" />
-								</div>
-							</Card>
-						</div>
-						<div className="flex-col flex-center w-full mt-12 xl:w-3/12 xl:mt-0">
-							<Card>
-								<div className=" w-60 sm:w-60 h-full">
-									<Image src={foceni5} width="300" height="200" alt="hero" />
-								</div>
-							</Card>
-						</div>
-						<div className="flex-col flex-center w-full mt-12 xl:w-3/12 xl:mt-0">
-							<Card>
-								<div className=" w-60 sm:w-60 h-full">
-									<Image src={foceni6} width="300" height="200" alt="hero" />
-								</div>
-							</Card>
-						</div> */}
 					</div>
 				</div>
 				<Footer />

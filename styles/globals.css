@@ -37,6 +37,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -133,7 +134,7 @@ a {
   margin-bottom: -7px;
 }
 
-.aktuality-image, .aktuality-partners-images>.flex-col, .aktuality-p {
+.aktuality-image, .aktuality-partners-images>.flex-col, .aktuality-p, .aktuality-title {
   display: none;
 }
 
@@ -145,16 +146,12 @@ a {
   margin-left: 0 !important;
 }
 
-.person-favorite-music-mobile {
-  display: flex;
-}
-
-.person-favorite-music {
-  display: none;
-}
-
 #galerie>.cards-wrapper>div>.card-wrapper>div>.card>div {
   margin-bottom: -9px;
+}
+
+.gallery-cards:nth-last-child(-n+4) {
+  display: none;
 }
 
 #kontakt>div>#socials-wrapper>div>a>div>.card-wrapper>div>.card {
@@ -292,14 +289,19 @@ a {
     margin-left: 0 !important;
     margin-top: 4rem;
   }
+
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
 }
 
 @media (min-width: 640px) {
-  .aktuality-partners-images, .aktuality-partners-images>.flex-col, .person-favorite-music, .scroll-up-btn-wrapper {
+  .aktuality-partners-images, .aktuality-partners-images>.flex-col, .scroll-up-btn-wrapper, .aktuality-title, .gallery-cards:nth-last-child(-n+4) {
     display: flex;
   }
-  
-  .aktuality-image-mobile, .person-favorite-music-mobile {
+
+  .aktuality-image-mobile {
     display: none;
   }
 }

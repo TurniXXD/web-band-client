@@ -109,7 +109,7 @@ export default function Contact() {
 							<a target="_blank" rel="noreferrer noopener">
 								<div className="flex-col">
 									<Card>
-										<span className="nav-item">
+										<span>
 											<span className="typcn typcn-social-facebook-circular text-4xl"></span>
 										</span>
 									</Card>
@@ -120,7 +120,7 @@ export default function Contact() {
 							<a target="_blank" rel="noreferrer noopener">
 								<div className="flex-col">
 									<Card>
-										<span className="nav-item">
+										<span>
 											<span className="typcn typcn-social-instagram-circular text-4xl"></span>
 										</span>
 									</Card>
@@ -133,7 +133,7 @@ export default function Contact() {
 							<a target="_blank" rel="noreferrer noopener">
 								<div className="flex-col">
 									<Card>
-										<span className="nav-item">
+										<span>
 											<span className="typcn typcn-social-youtube-circular text-4xl"></span>
 										</span>
 									</Card>
@@ -221,21 +221,21 @@ export default function Contact() {
 			<div className="footer-mobile flex-row flex-center space-x-8 -mt-12 z-10 relative">
 				<div className="flex-col">
 					<Link href="https://www.facebook.com/steepensband">
-						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+						<a target="_blank" rel="noreferrer noopener">
 							<span className="typcn typcn-social-facebook-circular text-4xl"></span>
 						</a>
 					</Link>
 				</div>
 				<div className="flex-col">
 					<Link href="https://www.instagram.com/steepensband">
-						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+						<a target="_blank" rel="noreferrer noopener">
 							<span className="typcn typcn-social-instagram-circular text-4xl"></span>
 						</a>
 					</Link>
 				</div>
 				<div className="flex-col">
 					<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
-						<a target="_blank" rel="noreferrer noopener" className="nav-item">
+						<a target="_blank" rel="noreferrer noopener">
 							<span className="typcn typcn-social-youtube-circular text-4xl"></span>
 						</a>
 					</Link>

@@ -21,6 +21,7 @@ export default function News({ posts }) {
 											width={200}
 											height={250}
 											alt={post?.image[0].formats?.medium.name}
+											priority={true}
 										/>
 									</div>
 								</div>
