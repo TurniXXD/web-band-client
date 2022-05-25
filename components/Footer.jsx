@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Element as Section } from 'react-scroll'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from 'styles/Contact.module.css'
@@ -101,73 +102,74 @@ export default function Contact() {
 	}, [])
 
 	return (
-		<div id="kontakt" className="container mt-20">
-			<div className="flex-row flex-center">
-				<div id="socials-wrapper" className="footer-desktop flex-col flex-wrap mr-8">
-					<div className="flex-row flex-center space-x-8 z-10 relative">
-						<Link href="https://www.facebook.com/steepensband">
-							<a target="_blank" rel="noreferrer noopener">
-								<div className="flex-col">
-									<Card>
-										<span>
-											<span className="typcn typcn-social-facebook-circular text-4xl"></span>
-										</span>
-									</Card>
-								</div>
-							</a>
-						</Link>
-						<Link href="https://www.instagram.com/steepensband">
-							<a target="_blank" rel="noreferrer noopener">
-								<div className="flex-col">
-									<Card>
-										<span>
-											<span className="typcn typcn-social-instagram-circular text-4xl"></span>
-										</span>
-									</Card>
-								</div>
-							</a>
-						</Link>
+		<Section name="kontakty" className="element">
+			<div id="kontakt" className="container mt-20">
+				<div className="flex-row flex-center">
+					<div id="socials-wrapper" className="footer-desktop flex-col flex-wrap mr-8">
+						<div className="flex-row flex-center space-x-8 z-10 relative">
+							<Link href="https://www.facebook.com/steepensband">
+								<a target="_blank" rel="noreferrer noopener">
+									<div className="flex-col">
+										<Card>
+											<span>
+												<span className="typcn typcn-social-facebook-circular text-4xl"></span>
+											</span>
+										</Card>
+									</div>
+								</a>
+							</Link>
+							<Link href="https://www.instagram.com/steepensband">
+								<a target="_blank" rel="noreferrer noopener">
+									<div className="flex-col">
+										<Card>
+											<span>
+												<span className="typcn typcn-social-instagram-circular text-4xl"></span>
+											</span>
+										</Card>
+									</div>
+								</a>
+							</Link>
+						</div>
+						<div className="flex-row flex-center space-x-8 mt-10 z-10 relative">
+							<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
+								<a target="_blank" rel="noreferrer noopener">
+									<div className="flex-col">
+										<Card>
+											<span>
+												<span className="typcn typcn-social-youtube-circular text-4xl"></span>
+											</span>
+										</Card>
+									</div>
+								</a>
+							</Link>
+							<Link href="https://bandzone.cz/steepens" target="_blank" rel="noreferrer noopener">
+								<a target="_blank" rel="noreferrer noopener">
+									<div className="flex-col">
+										<Card>
+											<span className="nav-item -mt-3">
+												<Image src={bandzone} width="30" height="30" alt="hero" />
+											</span>
+										</Card>
+									</div>
+								</a>
+							</Link>
+						</div>
 					</div>
-					<div className="flex-row flex-center space-x-8 mt-10 z-10 relative">
-						<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
-							<a target="_blank" rel="noreferrer noopener">
-								<div className="flex-col">
-									<Card>
-										<span>
-											<span className="typcn typcn-social-youtube-circular text-4xl"></span>
-										</span>
-									</Card>
-								</div>
-							</a>
-						</Link>
-						<Link href="https://bandzone.cz/steepens" target="_blank" rel="noreferrer noopener">
-							<a target="_blank" rel="noreferrer noopener">
-								<div className="flex-col">
-									<Card>
-										<span className="nav-item -mt-3">
-											<Image src={bandzone} width="30" height="30" alt="hero" />
-										</span>
-									</Card>
-								</div>
-							</a>
-						</Link>
+					<div className="flex-col">
+						<div className="flex-row">
+							<iframe
+								id="JotFormIFrame-220643511302339"
+								allowtransparency="true"
+								allowFullScreen={true}
+								src="https://form.jotform.com/220643511302339"
+								frameBorder="0"
+								style={{ minWidth: '100%', height: '539px', border: 'none' }}
+								scrolling="no"
+							/>
+						</div>
+						<div className="hide-banner"></div>
 					</div>
-				</div>
-				<div className="flex-col">
-					<div className="flex-row">
-						<iframe
-							id="JotFormIFrame-220643511302339"
-							allowtransparency="true"
-							allowFullScreen={true}
-							src="https://form.jotform.com/220643511302339"
-							frameBorder="0"
-							style={{ minWidth: '100%', height: '539px', border: 'none' }}
-							scrolling="no"
-						/>
-					</div>
-					<div className="hide-banner"></div>
-				</div>
-				{/* <div id="form-wrapper" className="flex-col">
+					{/* <div id="form-wrapper" className="flex-col">
 					<div className="flex-row">
 						<form autocomplete="on">
 							<div class="form-inputs row">
@@ -217,41 +219,42 @@ export default function Contact() {
 						</form>
 					</div>
 				</div> */}
+				</div>
+				<div className="footer-mobile flex-row flex-center space-x-8 -mt-12 z-10 relative">
+					<div className="flex-col">
+						<Link href="https://www.facebook.com/steepensband">
+							<a target="_blank" rel="noreferrer noopener">
+								<span className="typcn typcn-social-facebook-circular text-4xl"></span>
+							</a>
+						</Link>
+					</div>
+					<div className="flex-col">
+						<Link href="https://www.instagram.com/steepensband">
+							<a target="_blank" rel="noreferrer noopener">
+								<span className="typcn typcn-social-instagram-circular text-4xl"></span>
+							</a>
+						</Link>
+					</div>
+					<div className="flex-col">
+						<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
+							<a target="_blank" rel="noreferrer noopener">
+								<span className="typcn typcn-social-youtube-circular text-4xl"></span>
+							</a>
+						</Link>
+					</div>
+					<div className="flex-col">
+						<Link href="mailto:kontakt@steepensband.eu">
+							<a className="nav-item mb-1">
+								<span className="text-4xl -mb-2">
+									<Image src={bandzone} width="30" height="30" alt="hero" />
+								</span>
+							</a>
+						</Link>
+					</div>
+				</div>
+				<div className="flex-row flex-center mb-4 mt-6 text-sm sm:text-base">MAIL: kontakt@steepensband.eu</div>
+				<div className="flex-row flex-center mb-4 mt-6">&copy; {new Date().getFullYear()} | Steepens</div>
 			</div>
-			<div className="footer-mobile flex-row flex-center space-x-8 -mt-12 z-10 relative">
-				<div className="flex-col">
-					<Link href="https://www.facebook.com/steepensband">
-						<a target="_blank" rel="noreferrer noopener">
-							<span className="typcn typcn-social-facebook-circular text-4xl"></span>
-						</a>
-					</Link>
-				</div>
-				<div className="flex-col">
-					<Link href="https://www.instagram.com/steepensband">
-						<a target="_blank" rel="noreferrer noopener">
-							<span className="typcn typcn-social-instagram-circular text-4xl"></span>
-						</a>
-					</Link>
-				</div>
-				<div className="flex-col">
-					<Link href="https://www.youtube.com/channel/UCsr7ezsy-6ui68nSRQXwVAg">
-						<a target="_blank" rel="noreferrer noopener">
-							<span className="typcn typcn-social-youtube-circular text-4xl"></span>
-						</a>
-					</Link>
-				</div>
-				<div className="flex-col">
-					<Link href="mailto:kontakt@steepensband.eu">
-						<a className="nav-item mb-1">
-							<span className="text-4xl -mb-2">
-								<Image src={bandzone} width="30" height="30" alt="hero" />
-							</span>
-						</a>
-					</Link>
-				</div>
-			</div>
-			<div className="flex-row flex-center mb-4 mt-6 text-sm sm:text-base">MAIL: kontakt@steepensband.eu</div>
-			<div className="flex-row flex-center mb-4 mt-6">&copy; {new Date().getFullYear()} | Steepens</div>
-		</div>
+		</Section>
 	)
 }

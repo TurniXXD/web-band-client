@@ -23,6 +23,6 @@
       "@styles/*": ["styles/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/context.js", "pages/index.tsx", "pages/_document.tsx", "pages/kontakty.jsx", "components/Header.jsx", "pages/_app.jsx", "components/Card.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/context.js", "pages/index.tsx", "pages/_document.tsx", "pages/kontakty.jsx", "components/Header.jsx", "pages/_app.jsx", "components/Card.jsx", "public/js-svg/header.js"],
   "exclude": ["node_modules"]
 }

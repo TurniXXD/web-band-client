@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import { AnimatePresence } from 'framer-motion'
 import { createContext } from 'react'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import 'typicons.font/src/font/typicons.css'
 import '../styles/globals.css'
 import 'react-image-lightbox/style.css'
