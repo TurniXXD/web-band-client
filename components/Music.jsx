@@ -160,9 +160,9 @@ export default function Music({ songs }) {
 			<div id="song-list-wrapper" className="flex-row">
 				<div className="flex-col">
 					{songs &&
-						songs.map((song) => {
+						songs.map((song, i) => {
 							return (
-								<div key={song?.id} className="flex-row">
+								<div key={i} className="flex-row">
 									<button onlick={playSong()}></button>
 									<span>{song?.title}</span> <br />
 								</div>

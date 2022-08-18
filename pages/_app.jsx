@@ -47,19 +47,3 @@ export default function MyApp({ Component, pageProps }) {
 		</GlobalContext.Provider>
 	)
 }
-
-// get app's properties, ctx = context
-MyApp.getInitialProps = async (ctx) => {
-	try {
-		const appProps = await App.getInitialProps(ctx)
-
-		return {
-			...appProps,
-			revalidate: 1,
-		}
-	} catch (error) {
-		return {
-			props: null,
-		}
-	}
-}
