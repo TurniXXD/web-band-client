@@ -142,14 +142,14 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
         </Slider>
         <ScrollDownBtn />
         <Section name="aktuality" className="element">
-          <div id="aktuality" className="container sm:mt-32">
+          <div id="aktuality" className="container mt-16 sm:mt-32">
             <div className="flex-row flex-center mb-4 sm:mb-20">
               <div className="flex-col">
                 <h2 className="text-5xl sm:text-6xl">Aktuality</h2>
               </div>
             </div>
-            <div className="cards-wrapper flex flex-wrap flex-center xl:space-x-28">
-              <div className="flex-col flex-center w-full">
+            <div className="cards-wrapper flex flex-wrap flex-center xl:gap-24">
+              <div className="flex-center w-full">
                 <Card>
                   <div className="flex-row aktuality-image-mobile">
                     <div>
@@ -214,7 +214,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                       <div className="flex-row mt-4 sm:mt-10">
                         <div className="flex-col">
                           <span className="text-base sm:text-lg">Více informací {' '}
-                            <Link href="https://www.facebook.com/events/1284569618704405?acontext=%7B%22event_action_history%22%3A[%7B%22surface%22%3A%22page%22%7D]%7D">
+                            <Link href="https://fb.me/e/3smcmRbtI">
                               <a target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">
                                 <span className="underline">zde</span>
                               </a>
@@ -222,6 +222,83 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                           </span>
                         </div>
                       </div>
+                    </div>
+                  </div>
+                </Card>
+              </div>
+              <div className="flex-center w-full">
+                <Card>
+                  {/* <div className="flex-row aktuality-image-mobile">
+                    <div>
+                      <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
+                    </div>
+                  </div> */}
+                  <div className="flex-row m-4 sm:m-0">
+                    {/* <div className="flex-col aktuality-image">
+                      <div>
+                        <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
+                      </div>
+                    </div> */}
+                    <div className="flex-col py-4 sm:py-8 px-5 sm:p-12">
+                      <div className="flex-row-reverse aktuality-partners-images">
+                        {/* <div className="flex-col flex-center ml-8">
+                          <Link href="https://www.facebook.com/kapelazostra/">
+                            <a target="_blank" rel="noreferrer noopener">
+                              <Image src={zostra} width="60" height="60" alt="hero" />
+                            </a>
+                          </Link>
+                        </div>
+                        <div className="flex-col flex-center ml-8">
+                          <Link href="https://www.facebook.com/kapelapositive">
+                            <a target="_blank" rel="noreferrer noopener">
+                              <Image src={positive} width="60" height="60" alt="hero" />
+                            </a>
+                          </Link>
+                        </div>
+                        <div className="flex-col flex-center">
+                          <Link href="https://www.facebook.com/rockhillmusicclub/">
+                            <a target="_blank" rel="noreferrer noopener">
+                              <Image src={rockhill} width="75" height="75" alt="hero" />
+                            </a>
+                          </Link>
+                        </div> */}
+                        <div className="flex grow items-center">
+                          <h2 className="text-2xl sm:text-6xl mb-8">Teralodon & Steepens</h2>
+                        </div>
+                      </div>
+                      <Link href="https://goo.gl/maps/TUZVc6KGrWwXoePs6">
+                        <a target="_blank" rel="noreferrer noopener">
+                          <div className="flex-row">
+                            <div className="flex-col">
+                              <span className="typcn typcn-location-outline mr-2 text-base sm:text-xl"></span>
+                            </div>
+                            <div className="flex-col">
+                              <span className="text-base sm:text-xl">29.9. 2022 BARRÁK music club Ostrava</span>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
+                      <div className="aktuality-p flex-row mt-6">
+                        <p>
+                          Nabitá akce v proslulém ostravském klubu. Společně s kapelou <a href="https://bandzone.cz/crossofthedarkness" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">Teralodon</a> chystáme velkou show tak neváhejte přijít!
+                        </p>
+                      </div>
+                      <div className="flex-row mt-16 sm:mt-4">
+                        <div className="flex-col">
+                          <span className="text-base sm:text-lg">Vstupné upřesníme později</span>
+                        </div>
+                      </div>
+                      {/* <div className="flex-row mt-4 sm:mt-10">
+                        <div className="flex-col">
+                          <span className="text-base sm:text-lg">Více informací {' '}
+                            <Link href="https://fb.me/e/3smcmRbtI">
+                              <a target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">
+                                <span className="underline">zde</span>
+                              </a>
+                            </Link>
+                          </span>
+                        </div>
+                      </div> */}
                     </div>
                   </div>
                 </Card>
