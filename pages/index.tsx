@@ -29,6 +29,7 @@ import foceni2 from 'public/foceni/2.png'
 import foceni3 from 'public/foceni/3.png'
 
 import rockoutPoster from 'public/aktuality/poster-rockout.png'
+import barrackPoster from 'public/aktuality/poster-barrack.png'
 import izzy from 'public/kapela/izzy.png'
 import kuba from 'public/kapela/kuba.png'
 import martin from 'public/kapela/martin.png'
@@ -228,17 +229,17 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
               </div>
               <div className="flex-center w-full">
                 <Card>
-                  {/* <div className="flex-row aktuality-image-mobile">
+                  <div className="flex-row aktuality-image-mobile">
                     <div>
-                      <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
+                      <Image src={barrackPoster} width="707" height="1000" alt="hero" />
                     </div>
-                  </div> */}
-                  <div className="flex-row m-4 sm:m-0">
-                    {/* <div className="flex-col aktuality-image">
+                  </div>
+                  <div className="flex-row">
+                    <div className="flex-col aktuality-image">
                       <div>
-                        <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
+                        <Image src={barrackPoster} width="707" height="1000" alt="hero" />
                       </div>
-                    </div> */}
+                    </div>
                     <div className="flex-col py-4 sm:py-8 px-5 sm:p-12">
                       <div className="flex-row-reverse aktuality-partners-images">
                         {/* <div className="flex-col flex-center ml-8">
@@ -263,7 +264,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                           </Link>
                         </div> */}
                         <div className="flex grow items-center">
-                          <h2 className="text-2xl sm:text-6xl mb-8">Teralodon & Steepens</h2>
+                          <h2 className="text-2xl sm:text-6xl mb-8">Víkend v klubu Barrack</h2>
                         </div>
                       </div>
                       <Link href="https://goo.gl/maps/TUZVc6KGrWwXoePs6">
@@ -280,12 +281,12 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                       </Link>
                       <div className="aktuality-p flex-row mt-6">
                         <p>
-                          Nabitá akce v proslulém ostravském klubu. Společně s kapelou <a href="https://bandzone.cz/crossofthedarkness" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">Teralodon</a> chystáme velkou show tak neváhejte přijít!
+                          Nabitá akce v proslulém ostravském klubu. Společně s kapelou <a href="https://bandzone.cz/crossofthedarkness" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">Teralodon</a> a <a href="https://bandzone.cz/erin" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">Erin</a> chystáme velkou show. Nezapomeňte na to že každý slušný víkend začíná ve čtvrtek tak neváhejte přijít!
                         </p>
                       </div>
                       <div className="flex-row mt-16 sm:mt-4">
                         <div className="flex-col">
-                          <span className="text-base sm:text-lg">Vstupné upřesníme později</span>
+                          <span className="text-base sm:text-lg">Vstupné 100 Kč</span>
                         </div>
                       </div>
                       {/* <div className="flex-row mt-4 sm:mt-10">
