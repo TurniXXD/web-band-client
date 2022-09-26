@@ -29,10 +29,10 @@ import foceni2 from 'public/foceni/2.png'
 import foceni3 from 'public/foceni/3.png'
 
 import rockoutPoster from 'public/aktuality/poster-rockout.png'
-import barrackPoster from 'public/aktuality/poster-barrack.png'
+import barrakPoster from 'public/aktuality/poster-barrak.png'
 import izzy from 'public/kapela/izzy.png'
 import kuba from 'public/kapela/kuba.png'
-import martin from 'public/kapela/martin.png'
+//import martin from 'public/kapela/martin.png'
 import peta from 'public/kapela/peta.png'
 import barca from 'public/kapela/barca.png'
 
@@ -41,6 +41,13 @@ import rockhill2 from 'public/rockhill/2.jpg'
 import rockhill3 from 'public/rockhill/3.jpg'
 import rockhill4 from 'public/rockhill/4.jpg'
 import rockhill5 from 'public/rockhill/5.jpg'
+
+//import alfaBarca from 'public/alfa/barca.jpg'
+//import izzyMlhaAlfa from 'public/alfa/izzy-mlha.jpg'
+//import kubaAlfa from 'public/alfa/kuba.jpg'
+import martinAlfa from 'public/alfa/martin.jpg'
+//import petaAlfa from 'public/alfa/peta.jpg'
+//import vsiciAlfa from 'public/alfa/vsici.jpg'
 
 export default function Home(/* { global, songs, people, photos, posts } */) {
   let galleryContent = [rockhill1, rockhill2, rockhill3, rockhill4, rockhill5, foceni1, foceni2, foceni3]
@@ -231,13 +238,13 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                 <Card>
                   <div className="flex-row aktuality-image-mobile">
                     <div>
-                      <Image src={barrackPoster} width="707" height="1000" alt="hero" />
+                      <Image src={barrakPoster} width="707" height="1000" alt="hero" />
                     </div>
                   </div>
                   <div className="flex-row">
                     <div className="flex-col aktuality-image">
                       <div>
-                        <Image src={barrackPoster} width="707" height="1000" alt="hero" />
+                        <Image src={barrakPoster} width="707" height="1000" alt="hero" />
                       </div>
                     </div>
                     <div className="flex-col py-4 sm:py-8 px-5 sm:p-12">
@@ -264,7 +271,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                           </Link>
                         </div> */}
                         <div className="flex grow items-center">
-                          <h2 className="text-2xl sm:text-6xl mb-8">Víkend v klubu Barrack</h2>
+                          <h2 className="text-2xl sm:text-6xl mb-8">Víkend v klubu Barrák</h2>
                         </div>
                       </div>
                       <Link href="https://goo.gl/maps/TUZVc6KGrWwXoePs6">
@@ -454,43 +461,39 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
 							width="200"
 							height="200"
 						/> */}
-              {people.map((person: iPeople, i: number) => {
-                return (
-                  <div key={person.name} className="person flex-col">
-                    <Card>
-                      <div className="flex-row flex-center">
-                        {i == 0 && <Image src={barca} width="400" height="266" alt="hero" priority={true} />}
-                        {i == 1 && <Image src={martin} width="400" height="266" alt="hero" priority={true} />}
-                        {i == 2 && <Image src={kuba} width="400" height="266" alt="hero" priority={true} />}
-                        {i == 3 && <Image src={peta} width="400" height="266" alt="hero" priority={true} />}
-                        {i == 4 && <Image src={izzy} width="400" height="266" alt="hero" priority={true} />}
+              {people.map((person: iPeople, i: number) => (
+                <div key={person.name} className="person flex-col">
+                  <Card>
+                    <div className="flex-row flex-center">
+                      {i == 0 && <Image src={barca} width="400" height="266" alt="hero" priority={true} />}
+                      {i == 1 && <Image src={martinAlfa} width="400" height="266" alt="hero" priority={true} />}
+                      {i == 2 && <Image src={kuba} width="400" height="266" alt="hero" priority={true} />}
+                      {i == 3 && <Image src={peta} width="400" height="266" alt="hero" priority={true} />}
+                      {i == 4 && <Image src={izzy} width="400" height="266" alt="hero" priority={true} />}
+                    </div>
+                    <div className="flex-row flex-center mx-8 mt-8">
+                      <h2 className="text-xl-1-5 sm:text-4xl mb-2">{person.name}</h2>
+                    </div>
+                    <div className="flex-row flex-center mx-8">
+                      <span className="text-lg mb-4">{person.position}</span>
+                    </div>
+                    <div className="flex-row mx-8 sm:mx-16">
+                      <span className="text-lg mb-2">Oblíbená hudba:</span>
+                    </div>
+                    <div className="flex-row mx-8 sm:mx-16 mb-8">
+                      <div className="flex-col">
+                        {person.favoriteMusic.map((music: iFavoriteMusic, i) => (
+                          <div key={i} className="flex-row">
+                            <div className="flex-col">
+                              <span>{music.band}</span>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                      <div className="flex-row flex-center mx-8 mt-8">
-                        <h2 className="text-xl-1-5 sm:text-4xl mb-2">{person.name}</h2>
-                      </div>
-                      <div className="flex-row flex-center mx-8">
-                        <span className="text-lg mb-4">{person.position}</span>
-                      </div>
-                      <div className="flex-row mx-8 sm:mx-16">
-                        <span className="text-lg mb-2">Oblíbená hudba:</span>
-                      </div>
-                      <div className="flex-row mx-8 sm:mx-16 mb-8">
-                        <div className="flex-col">
-                          {person.favoriteMusic.map((music: iFavoriteMusic) => {
-                            return (
-                              <div className="flex-row">
-                                <div className="flex-col">
-                                  <span>{music.band}</span>
-                                </div>
-                              </div>
-                            )
-                          })}
-                        </div>
-                      </div>
-                    </Card>
-                  </div>
-                )
-              })}
+                    </div>
+                  </Card>
+                </div>
+              ))}
             </div>
           </div>
         </Section>

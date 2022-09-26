@@ -51,7 +51,7 @@ export default function Footer() {
 								<a target="_blank" rel="noreferrer noopener">
 									<div className="flex-col w-[123px]">
 										<Card>
-											<span className="nav-item -mt-3">
+											<span className="nav-item mt-3 ">
 												<Image src={bandzone} width="30" height="30" alt="hero" />
 											</span>
 										</Card>
@@ -136,9 +136,9 @@ export default function Footer() {
 						</Link>
 					</div>
 					<div className="flex-col">
-						<Link href="mailto:kontakt@steepensband.eu">
-							<a className="nav-item mb-1">
-								<span className="text-4xl -mb-2">
+						<Link href="https://bandzone.cz/steepens">
+							<a className="md:nav-item mb-1" target="_blank" rel="noreferrer noopener">
+								<span className="text-xl mt-8 md:text-4xl md:-mb-2">
 									<Image src={bandzone} width="36" height="36" alt="hero" />
 								</span>
 							</a>

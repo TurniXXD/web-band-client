@@ -67,7 +67,7 @@ export const people = [
 				band: 'Horkýže slíže',
 			},
 			{
-				band: 'Red Hot Chili Peppers',
+				band: 'Cocotte Minute',
 			},
 		],
 	},
