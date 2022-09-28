@@ -161,83 +161,6 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                 <Card>
                   <div className="flex-row aktuality-image-mobile">
                     <div>
-                      <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
-                    </div>
-                  </div>
-                  <div className="flex-row">
-                    <div className="flex-col aktuality-image">
-                      <div>
-                        <Image src={rockoutPoster} width="707" height="1000" alt="hero" />
-                      </div>
-                    </div>
-                    <div className="flex-col py-4 sm:py-8 px-5 sm:p-12">
-                      <div className="flex-row-reverse aktuality-partners-images">
-                        {/* <div className="flex-col flex-center ml-8">
-                          <Link href="https://www.facebook.com/kapelazostra/">
-                            <a target="_blank" rel="noreferrer noopener">
-                              <Image src={zostra} width="60" height="60" alt="hero" />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="flex-col flex-center ml-8">
-                          <Link href="https://www.facebook.com/kapelapositive">
-                            <a target="_blank" rel="noreferrer noopener">
-                              <Image src={positive} width="60" height="60" alt="hero" />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="flex-col flex-center">
-                          <Link href="https://www.facebook.com/rockhillmusicclub/">
-                            <a target="_blank" rel="noreferrer noopener">
-                              <Image src={rockhill} width="75" height="75" alt="hero" />
-                            </a>
-                          </Link>
-                        </div> */}
-                        <div className="flex grow items-center aktuality-title">
-                          <h2 className="text-xl-1-5 sm:text-6xl mb-2">Rockout</h2>
-                        </div>
-                      </div>
-                      <Link href="https://goo.gl/maps/5yrsriNyrrULpdbB8">
-                        <a target="_blank" rel="noreferrer noopener">
-                          <div className="flex-row">
-                            <div className="flex-col">
-                              <span className="typcn typcn-location-outline mr-2 text-base sm:text-xl"></span>
-                            </div>
-                            <div className="flex-col">
-                              <span className="text-base sm:text-xl">24.9. 2022 Bar Alfa Frýdek-Místek</span>
-                            </div>
-                          </div>
-                        </a>
-                      </Link>
-                      <div className="aktuality-p flex-row mt-6">
-                        <p>
-                          Nové sada song v zásobě a my jsme připraveni na další velkou akci. Společně s kapelami <a href="https://www.facebook.com/LitMeUpBand" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">LIT ME UP</a> a <a href="https://www.facebook.com/FellOnMadDays" target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">Fell on Mad Days</a> vám předvedeme sílu Frýdecké rockové hudby, takže se máte na co těšit!
-                        </p>
-                      </div>
-                      <div className="flex-row mt-10 sm:mt-4">
-                        <div className="flex-col">
-                          <span className="text-base sm:text-lg">Vstupné dobrovolné</span>
-                        </div>
-                      </div>
-                      <div className="flex-row mt-4 sm:mt-10">
-                        <div className="flex-col">
-                          <span className="text-base sm:text-lg">Více informací {' '}
-                            <Link href="https://fb.me/e/3smcmRbtI">
-                              <a target="_blank" rel="noreferrer noopener" className="underline hover:no-underline">
-                                <span className="underline">zde</span>
-                              </a>
-                            </Link>
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
-              </div>
-              <div className="flex-center w-full">
-                <Card>
-                  <div className="flex-row aktuality-image-mobile">
-                    <div>
                       <Image src={barrakPoster} width="707" height="1000" alt="hero" />
                     </div>
                   </div>
@@ -406,7 +329,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                   <iframe
                     className="max-h-full w-60 sm:w-96"
                     width="400"
-                    height="165"
+                    height="200"
                     src="https://www.youtube.com/embed/LmPuEv90NFI"
                     title="YouTube video player"
                     frameBorder="0"
@@ -420,7 +343,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                   <iframe
                     className="max-h-full w-60 sm:w-96"
                     width="400"
-                    height="165"
+                    height="200"
                     src="https://www.youtube.com/embed/YkXOYiAYJfk"
                     title="YouTube video player"
                     frameBorder="0"
@@ -434,8 +357,8 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                   <iframe
                     className="max-h-full w-60 sm:w-96"
                     width="400"
-                    height="165"
-                    src="https://www.youtube.com/embed/so-DNh3W_Ik"
+                    height="200"
+                    src="https://www.youtube.com/embed/N_cIkbZ8EXc"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
