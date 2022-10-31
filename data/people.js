@@ -72,30 +72,6 @@ export const people = [
 		],
 	},
 	{
-		name: 'Petr Kožušník',
-		position: 'Rytmická kytara',
-		favoriteMusic: [
-			{
-				band: 'Ozzy Osbourne',
-			},
-			{
-				band: 'Five Finger Death Punch',
-			},
-			{
-				band: 'Doga',
-			},
-			{
-				band: 'Mötley Crüe',
-			},
-			{
-				band: 'Avenged Sevenfold',
-			},
-			{
-				band: `Guns N' Roses`,
-			},
-		],
-	},
-	{
 		name: 'Filip Šmehlík',
 		position: 'Basa',
 		favoriteMusic: [
