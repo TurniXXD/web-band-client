@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic';
@@ -22,12 +23,13 @@ const Footer = dynamic(() => import('@components/Footer'), { suspense: true });
 import { HeaderSvg } from 'public/js-svg/header'
 
 import logo from 'public/steepens-logo-white.svg'
+import favicon from 'public/favicon/favicon.ico'
 
 import foceni1 from 'public/foceni/1.png'
 import foceni2 from 'public/foceni/2.png'
 import foceni3 from 'public/foceni/3.png'
 
-import christmasPoster from 'public/aktuality/poster-christmas-solo.png'
+import christmasPoster from 'public/aktuality/poster-christmas.png'
 import izzy from 'public/kapela/izzy.png'
 import kuba from 'public/kapela/kuba.png'
 import barca from 'public/kapela/barca.png'
@@ -39,6 +41,9 @@ import rockhill4 from 'public/rockhill/4.jpg'
 import rockhill5 from 'public/rockhill/5.jpg'
 
 import martinAlfa from 'public/alfa/martin.jpg'
+
+import kahan from 'public/kapely/kahan.png'
+import copycats from 'public/kapely/copycats.png'
 
 export default function Home(/* { global, songs, people, photos, posts } */) {
   let galleryContent = [rockhill1, rockhill2, rockhill3, rockhill4, rockhill5, foceni1, foceni2, foceni3]
@@ -63,6 +68,9 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
   return (
     <>
       <ScrollUpBtn />
+      <Head>
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+      </Head>
       <div className="page-wrapper">
         <div id="header-desktop-nav" className="flex-row items-center">
           <div className="absolute flex-col items-center top-0 z-20 h-full w-full">
@@ -184,6 +192,20 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                             </a>
                           </Link>
                         </div> */}
+                        <div className="flex-col flex-center ml-8">
+                          <Link href="https://bandzone.cz/_118091">
+                            <a target="_blank" rel="noreferrer noopener">
+                              <Image src={kahan} width="90" height="90" alt="hero" />
+                            </a>
+                          </Link>
+                        </div>
+                        <div className="flex-col flex-center ml-8">
+                          <Link href="https://www.facebook.com/Copycatsostrava/">
+                            <a target="_blank" rel="noreferrer noopener">
+                              <Image src={copycats} width="90" height="90" alt="hero" />
+                            </a>
+                          </Link>
+                        </div>
                         <div className="flex grow items-center">
                           <h2 className="text-2xl sm:text-6xl mb-8">Rock 'n' Roll Christmas</h2>
                         </div>
@@ -207,7 +229,7 @@ export default function Home(/* { global, songs, people, photos, posts } */) {
                       </div>
                       <div className="flex-row mt-16 sm:mt-4">
                         <div className="flex-col">
-                          <span className="text-base sm:text-lg">Vlezné upřesníme</span>
+                          <span className="text-base sm:text-lg">Vlezné dobrovolné</span>
                         </div>
                       </div>
                       {/* <div className="flex-row mt-4 sm:mt-10">

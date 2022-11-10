@@ -57,7 +57,7 @@ export default class CustomDocument extends Document {
 					}}
 				/>
 				<Head>
-					<link rel="shortcut icon" href=/* {global?.favicon[0]?.url} */"/public/favicon.ico" />
+					<link rel="shortcut icon" href=/* {global?.favicon[0]?.url} */"/public/favicon/favicon.ico" />
 					<meta name="theme-color" content={/* global?.primaryColor */"#B70101"} />
 					<meta name="author" content="https://github.com/TurniXXD" />
 				</Head>
